@@ -1,0 +1,137 @@
+:root {
+    --veronica-blue: #0091FF;
+    --highlight-pink: #FE0170;
+}
+
+* {
+    font-size: 6px;
+}
+
+/* Flexbox met programma cards */
+main {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+}
+
+
+/* Programma cards */
+/* Grid layout */
+.programma-card {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr 1fr .3fr;
+
+    background-color: white;
+
+    padding: .5em 1em;
+    border-radius: .5em;
+    filter: drop-shadow(0px 0px 8px #bebebe);
+
+    width: 80vw;
+}
+
+/* Programma titel */
+.programma-card h2 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+    margin: 0;  /* remove default margin-top & margin-bottom */
+    align-self: start;
+    justify-self: center;
+
+    
+    width: 100%; 
+    height: max-content;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+
+}
+
+/* Tijd */
+.programma-card p:nth-of-type(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    
+    margin: 0;  /* remove default margin-top & margin-bottom */
+    align-self: start; 
+    justify-self: center;
+
+    width: 100%;
+    text-align: center;
+    padding: .1em 0em .1em 0em;
+
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white; 
+    border-radius: .3em;
+
+    translate: 0% -80%;
+
+    background-color: var(--veronica-blue);
+}
+
+/* Beschrijving programma */
+.programma-card p:nth-last-of-type(2) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+
+    margin: 0;  /* remove default margin-top & margin-bottom */
+    width: 80%;
+    align-self: center; 
+    justify-self: center;
+
+    width: 80%; 
+    height: max-content;
+    text-align: start;
+    font-size: 1em;
+    padding: 1em 0em 0em 0em;
+
+}
+
+/* Thumbnail DJ */
+.programma-card img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;
+    border-radius: .3em;
+}
+
+/* Naam DJ */
+.programma-card p:nth-of-type(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+    margin: 0;  /* remove default margin-top & margin-bottom */
+    align-self: center; 
+    justify-self: center;
+
+    width: 100%; 
+    height: max-content;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+
+/* Link op card */
+.programma-card a {
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+    align-self: start; 
+    justify-self: end;
+
+    width: 2.5em;
+    height: 2.5em;
+
+    border-radius: 50%;
+
+    background-color: var(--highlight-pink);
+}
+
