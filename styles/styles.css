@@ -193,3 +193,38 @@ main {
     background-color: var(--highlight-pink);
 }
 
+/* Media queries programmering cards */
+.programma-card, .programma-card a {
+    /* 150px */
+    font-size: 6px;
+
+    /* 200px */
+    @media screen and (min-width: 200px) {
+        font-size: 8px;
+    }
+
+    /* 300px */
+    @media screen and (min-width: 300px) {
+        font-size: 10px;
+    }
+
+    /* 400px */
+    @media screen and (min-width: 400px) {
+        font-size: 12px;
+    }   
+    
+    /* 500px */
+    @media screen and (min-width: 500px) {
+        font-size: 14px;
+    }  
+    
+    /* 600px */
+    @media screen and (min-width: 600px) {
+        font-size: 15px;
+    }    
+
+    /* 700px */
+    @media screen and (min-width: 700px) {
+        font-size: 16px;
+    }    
+}
