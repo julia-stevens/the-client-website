@@ -196,3 +196,9 @@ main {
     background-size: 1.2em;
     background-position: center;
 }
+
+/* Verberg 'Programmering' */
+main h1 {
+    display: none;
+}
+
