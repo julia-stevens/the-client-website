@@ -85,6 +85,8 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 4em;
+
+    margin-top: 3rem;   
 }
 
 /* Programma cards */
@@ -325,6 +327,7 @@ ul, li > a  {
 ul.secondary-menu {
     border-bottom: solid .1rem var(--sub-text-light);
     padding: 0 .5rem 0 .5rem;
+    max-width: 700px;
 
     /* Flex layout */
     display: flex; 
@@ -347,4 +350,40 @@ ul.secondary-menu li:first-of-type>a {
     color: var(--highlight-pink);
 }
 
+/* Flex layout dagen van de week */
+ul.main-days {
+    display: flex; 
 
+    align-items: center;
+    text-align: center;
+
+    height: 5rem;
+
+    overflow-x: auto;
+    max-width: 700px;
+}
+
+
+/* Styling dagen van de week */
+ul.main-days li>a {
+    color: black;
+    text-align: center;
+
+    white-space: pre-line;
+}
+
+ul.main-days li {
+    display: block;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+ul.main-days li:nth-of-type(2) {
+    background-color: var(--highlight-pink);
+    padding: 1.3rem 0 1.3rem 0;
+}
+
+/* Tekst in list item */
+ul.main-days li:nth-of-type(2)>a {
+    color: white;
+}
