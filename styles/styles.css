@@ -251,7 +251,7 @@ input[type=checkbox]:checked + label {
 nav {
     display: grid; 
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 1fr;
+    grid-template-rows: 1fr;
 
     position: fixed; 
     width: 100vw;
@@ -295,7 +295,6 @@ nav .nav-main-menu a:last-of-type {
 
 /* Hamburger menu items */ 
 .primary-menu {
-    grid-row: 2/3;
 
     /* Flex layout hamburger menu items */
     display: flex; 
@@ -306,14 +305,12 @@ nav .nav-main-menu a:last-of-type {
     padding: .8rem 0 .8rem 0;
     background-color: var(--veronica-light-blue);
 
-    transition: .3s all;
-    opacity: 0;
-
-
+    transition: .3s ease;
+    translate: -100% 0; 
 }
 
 .primary-menu.clicked {
-    opacity: 1;
+    translate: 0 0;
 }
 
 /* Tekst opmaak hamburger menu items */
@@ -344,8 +341,7 @@ ul.secondary-menu {
     height: 4rem;
     align-items: center;
     
-    /* padding-top: 61.3984px; */
-    padding-top: 80px;
+    padding-top: 61.3984px;
 
 }
 
@@ -411,7 +407,7 @@ footer {
     border-radius: .5em;
     filter: drop-shadow(0px 0px 8px #bebebe);
     width: 80vw;
-    max-width: 700px;
+    max-width: 500px;
 
     height: max-content;
 
