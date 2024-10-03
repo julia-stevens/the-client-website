@@ -3,6 +3,8 @@
     --veronica-blue: #0091FF;
     --veronica-light-blue: #37B7F5;
     --highlight-pink: #FE0170;
+    --sub-text-light: hsl(0, 0%, 83%);
+    --sub-text: #8B8B8B;
 }
 
 /* Font */
@@ -73,6 +75,8 @@
 body {
     font-size: 16px;
     font-family: 'Brutal Type';
+    margin: 0; 
+    padding: 0;
 }
 
 /* Flexbox met programma cards */
@@ -258,7 +262,7 @@ nav .nav-main-menu {
 
     background-color: var(--veronica-blue);
 
-    padding: .3rem .3rem .3rem .3rem;
+    padding: .3rem .5rem .3rem .5rem;
 }
 
 /* Nav logo */
@@ -305,7 +309,7 @@ nav .nav-main-menu a:last-of-type {
 /* Tekst opmaak hamburger menu items */
 nav .primary-menu li>a {
     color: white;
-    font-weight: 500;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -317,7 +321,30 @@ ul, li > a  {
     padding: 0; 
 }
 
+/* Flex layout secondair menu */
+ul.secondary-menu {
+    border-bottom: solid .1rem var(--sub-text-light);
+    padding: 0 .5rem 0 .5rem;
 
+    /* Flex layout */
+    display: flex; 
+    gap: 3rem;
+    overflow-x: auto;
+    height: 4rem;
+    align-items: center;
+}
 
+/* Styling items secondair menu */
+ul.secondary-menu li>a {
+    color: var(--sub-text);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Actieve link secondair manu */
+ul.secondary-menu li:first-of-type>a {
+    color: var(--highlight-pink);
+}
 
 
