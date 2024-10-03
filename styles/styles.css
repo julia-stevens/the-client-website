@@ -1,6 +1,7 @@
 /* Extra Light */
 :root {
     --veronica-blue: #0091FF;
+    --veronica-light-blue: #37B7F5;
     --highlight-pink: #FE0170;
 }
 
@@ -208,7 +209,7 @@ input[type=checkbox] + label {
       display: block;
       width: 1.5rem;
       height: 2px;
-      background-color: black;
+      background-color: white;
       margin: .28rem;
       transition: all 0.3s;
     }
@@ -236,4 +237,87 @@ input[type=checkbox]:checked + label {
       transform: rotate(-45deg);
       transform-origin: 10% 90%;
     }
-  }
+}
+
+/* Grid layout nav */
+nav {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
+}
+
+/* Altijd zichtbare menu */
+nav .nav-main-menu {
+    grid-row: 1/2;
+
+    /* Flex layout nav bar */
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--veronica-blue);
+
+    padding: .3rem .3rem .3rem .3rem;
+}
+
+/* Nav logo */
+nav .nav-main-menu a:first-of-type {
+    order: 2;
+}
+
+/* Grootte Veronica afbeelding */
+nav .nav-main-menu a:first-of-type>img {
+    width: 8rem;
+}
+
+/* Grootte Whatsapp afbeelding */
+nav .nav-main-menu a:last-of-type>img {
+    width: 2rem;
+}
+
+nav .nav-main-menu a:last-of-type {
+    order: 3;
+}
+
+
+/* Hamburger menu items */ 
+.primary-menu {
+    grid-row: 2/3;
+
+    /* Flex layout hamburger menu items */
+    display: flex; 
+    flex-direction: column;
+    gap: .8rem; 
+    align-items: center; 
+
+    padding: .8rem 0 .8rem 0;
+    background-color: var(--veronica-light-blue);
+
+    transition: .3s all;
+    opacity: 0;
+}
+
+.primary-menu.clicked {
+    opacity: 1;
+}
+
+/* Tekst opmaak hamburger menu items */
+nav .primary-menu li>a {
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Opmaak lijst, lijst items en links */
+ul, li > a  {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0; 
+    padding: 0; 
+}
+
+
+
+
+
