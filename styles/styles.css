@@ -202,3 +202,38 @@ main h1 {
     display: none;
 }
 
+/* Vormgeving Hamburger Menu */
+input[type=checkbox] + label {
+    span {
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+      background-color: black;
+      margin: .28rem;
+      transition: all 0.3s;
+    }
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Checkbox verbergen */
+input[type=checkbox] {
+    display: none;
+}
+
+/* Hamburger wanneer checked */
+input[type=checkbox]:checked + label {
+    .burger-top{
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+    .burger-middle {
+      opacity: 0;
+    }
+    .burger-bottom {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+  }
