@@ -434,7 +434,7 @@ footer h2 {
     text-align: start;
 
     text-transform: uppercase;
-    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-size: clamp(.8rem, 3vw, 1.6rem);
 
     margin-left: 1rem;
 
