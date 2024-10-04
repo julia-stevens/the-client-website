@@ -409,7 +409,8 @@ footer {
 
 
     position: fixed; 
-    /* margin: 5% auto;  */
+    margin: 5% auto; 
+    height: max-content;
     left: 0;
     right: 0;
     bottom: 0;
