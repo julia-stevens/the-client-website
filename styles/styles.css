@@ -247,30 +247,21 @@ input[type=checkbox]:checked + label {
     }
 }
 
-/* Grid layout nav */
-nav {
-    display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-
-    position: fixed; 
-    width: 100vw;
-    z-index: 1;
-}
-
 /* Altijd zichtbare menu */
 nav .nav-main-menu {
-    grid-row: 1/2;
-
     /* Flex layout nav bar */
     display: flex; 
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     background-color: var(--veronica-blue);
 
     padding: .3rem .5rem .3rem .5rem;
+
+    position: fixed; 
+    width: 100vw;   
+    z-index: 1;
 }
 
 /* Nav logo */
@@ -307,6 +298,11 @@ nav .nav-main-menu a:last-of-type {
 
     transition: .3s ease;
     translate: -100% 0; 
+
+    position: fixed; 
+    width: 100vw; 
+    margin: 59px 0 0 0; 
+    z-index: 1;
 }
 
 .primary-menu.clicked {
