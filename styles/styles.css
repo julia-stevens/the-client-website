@@ -408,11 +408,11 @@ footer {
     height: max-content;
 
 
-    /* position: fixed; 
-    margin: 5% auto; 
+    position: fixed; 
+    /* margin: 5% auto;  */
     left: 0;
     right: 0;
-    bottom: 0; */
+    bottom: 0;
 
 }
 
