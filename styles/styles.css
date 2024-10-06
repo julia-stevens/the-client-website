@@ -546,6 +546,8 @@ section a {
 
         position: sticky;
 
+        max-height: 60vh;
+
     }    
 
     section h2 {
@@ -578,7 +580,7 @@ section a {
     }
 
     .programmering {
-        height: 70vh; 
+        height: 63vh; 
         overflow-y: auto;
         width: 800px;
     }
