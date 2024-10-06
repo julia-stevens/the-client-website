@@ -1,7 +1,7 @@
 /* Extra Light */
 :root {
     --veronica-blue: #0091FF;
-    --veronica-light-blue: #37B7F5;
+    --veronica-light-blue: rgba(55, 183, 245);
     --highlight-pink: #FE0170;
     --sub-text-light: hsl(0, 0%, 83%);
     --sub-text: #8B8B8B;
@@ -99,7 +99,7 @@ main {
     padding: .5em 1em;
     border-radius: .5em;
     filter: drop-shadow(0px 0px 8px #bebebe);
-    width: 80vw;
+    width: 70vw;
     max-width: 700px;
 }
 
@@ -491,3 +491,11 @@ footer a {
     background-position: center;
 }
 
+.programma-card.active {
+    scale: 1.1;
+    opacity: 1;     
+}
+
+.programma-card:not(.active) {
+    opacity: .5;
+}
