@@ -80,13 +80,12 @@ body {
 }
 
 /* Flexbox met programma cards */
-main {
+.programmering {
     display: flex; 
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
-    gap: 4em;
-
-    margin-top: 3rem;   
+    gap: 4rem;
+    margin-top: 3rem;
 }
 
 /* Programma cards */
@@ -100,7 +99,7 @@ main {
     border-radius: .5em;
     filter: drop-shadow(0px 0px 8px #bebebe);
     width: 70vw;
-    max-width: 700px;
+    max-width: 500px;
 }
 
 /* Programma titel */
@@ -117,7 +116,7 @@ main {
     height: max-content;
     text-align: center;
     text-transform: uppercase;
-    font-size: clamp(1rem, 5vw, 2.5rem); /* repsonsive font-size */
+    font-size: clamp(1rem, 4.5vw, 1.8rem); /* repsonsive font-size */
 
 }
 
@@ -150,7 +149,7 @@ main {
     /* height: 80%; */
 
     text-align: start;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
     padding: 1em 0em 0em 0em;
     
     display: -webkit-box;
@@ -186,7 +185,7 @@ main {
     height: max-content;
     text-align: center;
     font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.2rem); /* repsonsive font-size */
+    font-size: clamp(1rem, 2vw, 1.1rem); /* repsonsive font-size */
 }
 
 /* Link op card */
@@ -206,7 +205,18 @@ main {
     background-position: center;
 }
 
-/* Verberg 'Programmering' */
+/* Wanneer programma card actief is */
+.programma-card.active {
+    scale: 1.1;
+    opacity: 1;     
+}
+
+/* Styling voor de programma cards die niet actief zijn */
+.programma-card:not(.active) {
+    opacity: .5;
+}
+
+/* Verberg 'H1 Programmering' */
 main h1 {
     display: none;
 }
@@ -220,6 +230,10 @@ input[type=checkbox] + label {
       background-color: white;
       margin: .28rem;
       transition: all 0.3s;
+    }
+
+    @media screen and (min-width:730px) {
+        display: none;
     }
 }
 
@@ -252,7 +266,7 @@ nav .nav-main-menu {
     /* Flex layout nav bar */
     display: flex; 
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     background-color: var(--veronica-blue);
@@ -309,6 +323,27 @@ nav .nav-main-menu a:last-of-type {
     translate: 0 0;
 }
 
+.primary-menu-big {
+    display: none;
+}
+
+@media screen and (min-width:730px) {
+    .primary-menu-big {
+        display: block;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        order: 2;
+    }
+    
+    nav {
+        display: flex; 
+        flex-direction: row;
+        flex-grow: 1;
+    }
+}
+
 /* Tekst opmaak hamburger menu items */
 nav .primary-menu li>a {
     color: white;
@@ -363,7 +398,6 @@ ul.main-days {
 
     height: 5rem;
 
-    overflow-x: auto;
     max-width: 700px;
 }
 
@@ -393,7 +427,7 @@ ul.main-days li:nth-of-type(2)>a {
 }
 
 /* Grid layout player */
-footer {
+section {
     display: grid; 
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -417,13 +451,13 @@ footer {
 }
 
 /* Reset */
-footer> h2, img, a, p {
+section> h2, img, a, p {
     margin: 0; 
     padding: 0;
 }
 
 /* Player titel huidig programma */
-footer h2 {
+section h2 {
     grid-column: 2/3;
     grid-row: 1/2;
 
@@ -438,7 +472,7 @@ footer h2 {
 }
 
 /* Player titel en artiest huidig nummer */
-footer p {
+section p {
     grid-column: 2/3;
     grid-row: 2/3;
     
@@ -460,7 +494,7 @@ footer p {
 }
 
 /* Player album cover */
-footer img {
+section img {
     grid-column: 1/2;
     grid-row: 1/3;
 
@@ -474,7 +508,7 @@ footer img {
 }
 
 /* Player play button */ 
-footer a {
+section a {
     grid-column: 3/4;
     grid-row: 1/3;
 
@@ -491,11 +525,57 @@ footer a {
     background-position: center;
 }
 
-.programma-card.active {
-    scale: 1.1;
-    opacity: 1;     
-}
+/* Responsive player */
+@media screen and (min-width: 1300px) {
+    section {
+        position: relative;
+        margin: 0; 
 
-.programma-card:not(.active) {
-    opacity: .5;
+        display: grid; 
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr .5fr .3fr .3fr .2fr;
+
+        justify-items: center;
+
+        margin-top: 3rem;
+        width: 400px;
+
+        position: sticky;
+
+    }    
+
+    section h2 {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+
+    section p {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+    }
+
+    section img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        width: 50%; 
+        height: auto;
+    }
+
+    section a {
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    main {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-evenly;
+    }
+
+    .programmering {
+        height: 70vh; 
+        overflow-y: auto;
+        width: 800px;
+    }
 }
