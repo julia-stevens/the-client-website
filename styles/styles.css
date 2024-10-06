@@ -374,6 +374,10 @@ ul.secondary-menu {
     
     padding-top: 61.3984px;
 
+    @media screen and (min-width: 705px) {
+        overflow-x: hidden;
+    }
+
 }
 
 /* Styling items secondair menu */
@@ -439,7 +443,7 @@ section {
     width: 80vw;
     max-width: 500px;
 
-    height: max-content;
+    max-height: 15vh;
 
 
     position: fixed; 
@@ -579,3 +583,4 @@ section a {
         width: 800px;
     }
 }
+
