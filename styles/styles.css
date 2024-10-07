@@ -99,7 +99,7 @@ input[type=checkbox]+label {
         transition: all 0.3s;
     }
 
-    @media (min-width:730px) {
+    @media screen and (min-width:730px) {
         display: none;
     }
 }
@@ -203,7 +203,6 @@ nav .nav-main-menu a:last-of-type {
         text-decoration: none;
         order: 2;
     }
-
 }
 
 /* Tekst opmaak hamburger menu items */
@@ -237,7 +236,6 @@ ul.secondary-menu {
     @media screen and (min-width: 705px) {
         overflow-x: hidden;
     }
-
 }
 
 /* Styling items secondair menu */
@@ -265,8 +263,7 @@ ul.main-days {
 /* Styling dagen van de week */
 ul.main-days li>a {
     color: black;
-    text-align: center;
-    /* white-space: pre-line; */
+    text-align: center; 
 }
 
 ul.main-days li {
@@ -322,16 +319,14 @@ ul.main-days li:nth-of-type(2)>a {
 .programma-card h2 {
     grid-column: 2/4;
     grid-row: 2/3;
-    margin: 0;
-    /* remove default margin-top & margin-bottom */
+    margin: 0; /* remove default margin-top & margin-bottom */
     align-self: start;
     justify-self: center;
     width: 100%;
     height: max-content;
     text-align: center;
     text-transform: uppercase;
-    font-size: clamp(1rem, 4.5vw, 1.8rem);
-    /* repsonsive font-size */
+    font-size: clamp(1rem, 4.5vw, 1.8rem); /* repsonsive font-size */
 }
 
 /* Tijd */
@@ -349,8 +344,7 @@ ul.main-days li:nth-of-type(2)>a {
     border-radius: .3em;
     translate: 0% -80%;
     background-color: var(--veronica-blue);
-    font-size: clamp(.6rem, 4vw, 1rem);
-    /* repsonsive font-size */
+    font-size: clamp(.6rem, 4vw, 1rem); /* repsonsive font-size */
 }
 
 /* Beschrijving programma */
@@ -385,16 +379,14 @@ ul.main-days li:nth-of-type(2)>a {
 .programma-card p:nth-of-type(3) {
     grid-column: 1/2;
     grid-row: 4/5;
-    margin: 0;
-    /* remove default margin-top & margin-bottom */
+    margin: 0; /* remove default margin-top & margin-bottom */
     align-self: center;
     justify-self: center;
     width: 100%;
     height: max-content;
     text-align: center;
     font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.1rem);
-    /* repsonsive font-size */
+    font-size: clamp(1rem, 2vw, 1.1rem); /* repsonsive font-size */
 }
 
 /* Link op card */
@@ -471,10 +463,7 @@ section {
 }
 
 /* Reset */
-section>h2,
-img,
-a,
-p {
+section>h2, img, a, p {
     margin: 0;
     padding: 0;
 }
@@ -526,7 +515,6 @@ section img {
         grid-row: 2/3;
         width: 50%;
         height: auto;
-
     }
 }
 
@@ -551,4 +539,3 @@ section a {
         grid-row: 5/6;
     }
 }
-
