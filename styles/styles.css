@@ -140,8 +140,9 @@ nav .nav-main-menu {
     background-color: var(--veronica-blue);
     padding: .3rem .5rem .3rem .5rem;
     position: fixed;
+    top: 0;
     width: 100vw;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Nav logo */
@@ -222,7 +223,7 @@ ul, li>a {
 
 /* Flex layout secondair menu */
 ul.secondary-menu {
-    border-bottom: solid .1rem var(--sub-text-light);
+    /* border-bottom: solid .1rem var(--sub-text-light); */
     padding: 0 .5rem 0 .5rem;
     max-width: 700px;
     /* Flex layout */
@@ -249,6 +250,28 @@ ul.secondary-menu li>a {
 /* Actieve link secondair manu */
 ul.secondary-menu li:first-of-type>a {
     color: var(--highlight-pink);
+    padding-left: 2rem;
+}
+
+/* Padding laaste link item secondair menu */
+ul.secondary-menu li:last-of-type>a {
+    padding-right: 2rem;
+}
+
+/* Scroll transitie */
+.secondary-menu {
+    position: fixed; 
+    width: 100vw; 
+    z-index: 1; 
+    top: 0px; 
+    background-color: white; 
+    transition: all .3s ease-in-out;
+}
+
+/* Scroll transitie */
+.secondary-menu-up {
+    top: -68px;
+    transition: all .3s ease-in-out;
 }
 
 /* Flex layout dagen van de week */
@@ -284,6 +307,29 @@ ul.main-days li:nth-of-type(2) {
 /* Tekst in list item */
 ul.main-days li:nth-of-type(2)>a {
     color: white;
+}
+
+/* Scroll transitie */
+.main-days {
+    position: fixed; 
+    width: 100vw; 
+    z-index: 1; 
+    top: 125px; 
+    background-color: white; 
+    transition: all .3s ease-in-out;
+}
+
+/* Scroll transitie */
+.main-days-up {
+    top: -125px;
+    transition: all .3s ease-in-out;
+}
+
+/* Midden centreren secondary & main days memu */
+.nav-ul {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Flexbox met programma cards */
