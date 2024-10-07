@@ -75,164 +75,31 @@
 body {
     font-size: 16px;
     font-family: 'Brutal Type';
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
-/* Flexbox met programma cards */
-.programmering {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    gap: 4rem;
-    margin-top: 3rem;
-}
-
-/* Programma cards */
-/* Grid layout */
-.programma-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: .2fr .3fr 1fr .3fr;
-    background-color: white;
-    padding: .5em 1em;
-    border-radius: .5em;
-    filter: drop-shadow(0px 0px 8px #bebebe);
-    width: 70vw;
-    max-width: 500px;
-}
-
-/* Programma titel */
-.programma-card h2 {
-    grid-column: 2/4;
-    grid-row: 2/3;
-
-    margin: 0;  /* remove default margin-top & margin-bottom */
-    align-self: start;
-    justify-self: center;
-
-    
-    width: 100%; 
-    height: max-content;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: clamp(1rem, 4.5vw, 1.8rem); /* repsonsive font-size */
-
-}
-
-/* Tijd */
-.programma-card p:nth-of-type(1) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    margin: 0;
-    align-self: start;
-    justify-self: center;
-    width: 100%;
-    text-align: center;
-    padding: .2em 0em .2em 0em;
-    font-weight: bold;
-    color: white;
-    border-radius: .3em;
-    translate: 0% -80%;
-    background-color: var(--veronica-blue);
-    font-size: clamp(.6rem, 4vw, 1rem); /* repsonsive font-size */
-}
-
-/* Beschrijving programma */
-.programma-card p:nth-last-of-type(2) {
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-    margin: 0;
-    align-self: start;
-    justify-self: center;
-    width: 80%;
-    /* height: 80%; */
-
-    text-align: start;
-    font-size: clamp(1rem, 2vw, 1.1rem);
-    padding: 1em 0em 0em 0em;
-    
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-            line-clamp: 4;
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
-
-    color: var(--sub-text);
-}
-
-/* Thumbnail DJ */
-.programma-card img {
-    grid-column: 1/2;
-    grid-row: 2/4;
-
-    width: 100%; 
-    height: auto; 
-    /* object-fit: contain; */
-    border-radius: .3em;
-}
-
-/* Naam DJ */
-.programma-card p:nth-of-type(3) {
-    grid-column: 1/2;
-    grid-row: 4/5;
-
-    margin: 0;  /* remove default margin-top & margin-bottom */
-    align-self: center; 
-    justify-self: center;
-
-    width: 100%; 
-    height: max-content;
-    text-align: center;
-    font-weight: bold;
-    font-size: clamp(1rem, 2vw, 1.1rem); /* repsonsive font-size */
-}
-
-/* Link op card */
-.programma-card a {
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
-    align-self: center;
-    justify-self: end;
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
-    background-color: var(--highlight-pink);
-    font-size: clamp(.5rem, 2vw, 1rem);
-    background-image: url('../assets/arrow-right.svg');
-    background-repeat: no-repeat;
-    background-size: 1.2em;
-    background-position: center;
-}
-
-/* Wanneer programma card actief is */
-.programma-card.active {
-    scale: 1.1;
-    opacity: 1;     
-}
-
-/* Styling voor de programma cards die niet actief zijn */
-.programma-card:not(.active) {
-    opacity: .5;
-}
-
-/* Verberg 'H1 Programmering' */
-main h1 {
-    display: none;
 }
 
 /* Vormgeving Hamburger Menu */
-input[type=checkbox] + label {
+input[type=checkbox]+label {
     span {
-      display: block;
-      width: 1.5rem;
-      height: 2px;
-      background-color: white;
-      margin: .28rem;
-      transition: all 0.3s;
+        display: block;
+        width: 1.5rem;
+        height: 2px;
+        background-color: white;
+        margin: .28rem;
+        transition: all 0.3s;
     }
 
-    @media screen and (min-width:730px) {
+    @media (min-width:730px) {
         display: none;
     }
 }
@@ -247,34 +114,33 @@ input[type=checkbox] {
 }
 
 /* Hamburger wanneer checked */
-input[type=checkbox]:checked + label {
-    .burger-top{
-      transform: rotate(45deg);
-      transform-origin: 10% 10%;
+input[type=checkbox]:checked+label {
+    .burger-top {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
     }
+
     .burger-middle {
-      opacity: 0;
+        opacity: 0;
     }
+
     .burger-bottom {
-      transform: rotate(-45deg);
-      transform-origin: 10% 90%;
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
     }
 }
 
 /* Altijd zichtbare menu */
 nav .nav-main-menu {
     /* Flex layout nav bar */
-    display: flex; 
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
     background-color: var(--veronica-blue);
-
     padding: .3rem .5rem .3rem .5rem;
-
-    position: fixed; 
-    width: 100vw;   
+    position: fixed;
+    width: 100vw;
     z-index: 1;
 }
 
@@ -297,25 +163,28 @@ nav .nav-main-menu a:last-of-type {
     order: 3;
 }
 
+@media screen and (min-width:730px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    }
+}
 
-/* Hamburger menu items */ 
+/* Hamburger menu items */
 .primary-menu {
-
     /* Flex layout hamburger menu items */
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    gap: .8rem; 
-    align-items: center; 
-
+    gap: .8rem;
+    align-items: center;
     padding: .8rem 0 .8rem 0;
     background-color: var(--veronica-light-blue);
-
     transition: .3s ease;
-    translate: -100% 0; 
-
-    position: fixed; 
-    width: 100vw; 
-    margin: 59px 0 0 0; 
+    translate: -100% 0;
+    position: fixed;
+    width: 100vw;
+    margin: 59px 0 0 0;
     z-index: 1;
 }
 
@@ -325,10 +194,8 @@ nav .nav-main-menu a:last-of-type {
 
 .primary-menu-big {
     display: none;
-}
 
-@media screen and (min-width:730px) {
-    .primary-menu-big {
+    @media screen and (min-width:730px) {
         display: block;
         color: white;
         font-weight: bold;
@@ -336,12 +203,7 @@ nav .nav-main-menu a:last-of-type {
         text-decoration: none;
         order: 2;
     }
-    
-    nav {
-        display: flex; 
-        flex-direction: row;
-        flex-grow: 1;
-    }
+
 }
 
 /* Tekst opmaak hamburger menu items */
@@ -352,11 +214,11 @@ nav .primary-menu li>a {
 }
 
 /* Opmaak lijst, lijst items en links */
-ul, li > a  {
+ul, li>a {
     list-style-type: none;
     text-decoration: none;
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
 }
 
 /* Flex layout secondair menu */
@@ -364,14 +226,12 @@ ul.secondary-menu {
     border-bottom: solid .1rem var(--sub-text-light);
     padding: 0 .5rem 0 .5rem;
     max-width: 700px;
-
     /* Flex layout */
-    display: flex; 
+    display: flex;
     gap: 3rem;
     overflow-x: scroll;
     height: 4rem;
     align-items: center;
-    
     padding-top: 61.3984px;
 
     @media screen and (min-width: 705px) {
@@ -395,29 +255,28 @@ ul.secondary-menu li:first-of-type>a {
 
 /* Flex layout dagen van de week */
 ul.main-days {
-    display: flex; 
-
+    display: flex;
     align-items: center;
     text-align: center;
-
     height: 5rem;
-
     max-width: 700px;
 }
-
 
 /* Styling dagen van de week */
 ul.main-days li>a {
     color: black;
     text-align: center;
-
-    white-space: pre-line;
+    /* white-space: pre-line; */
 }
 
 ul.main-days li {
     display: block;
     flex-grow: 1;
     cursor: pointer;
+}
+
+.main-days strong {
+    display: block;
 }
 
 ul.main-days li:nth-of-type(2) {
@@ -430,33 +289,193 @@ ul.main-days li:nth-of-type(2)>a {
     color: white;
 }
 
+/* Flexbox met programma cards */
+.programmering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 1300px) {
+        height: 63vh;
+        overflow-y: auto;
+        width: 800px;
+    }
+}
+
+/* Programma cards */
+/* Grid layout */
+.programma-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr .3fr 1fr .3fr;
+    background-color: white;
+    padding: .5em 1em;
+    border-radius: .5em;
+    filter: drop-shadow(0px 0px 8px #bebebe);
+    width: 70vw;
+    max-width: 500px;
+}
+
+/* Programma titel */
+.programma-card h2 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin: 0;
+    /* remove default margin-top & margin-bottom */
+    align-self: start;
+    justify-self: center;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 4.5vw, 1.8rem);
+    /* repsonsive font-size */
+}
+
+/* Tijd */
+.programma-card p:nth-of-type(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 0;
+    align-self: start;
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+    padding: .2em 0em .2em 0em;
+    font-weight: bold;
+    color: white;
+    border-radius: .3em;
+    translate: 0% -80%;
+    background-color: var(--veronica-blue);
+    font-size: clamp(.6rem, 4vw, 1rem);
+    /* repsonsive font-size */
+}
+
+/* Beschrijving programma */
+.programma-card p:nth-last-of-type(2) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin: 0;
+    align-self: start;
+    justify-self: center;
+    width: 80%;
+    text-align: start;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    padding: 1em 0em 0em 0em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+    color: var(--sub-text);
+}
+
+/* Thumbnail DJ */
+.programma-card img {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    width: 100%;
+    height: auto;
+    border-radius: .3em;
+}
+
+/* Naam DJ */
+.programma-card p:nth-of-type(3) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin: 0;
+    /* remove default margin-top & margin-bottom */
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    /* repsonsive font-size */
+}
+
+/* Link op card */
+.programma-card a {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    align-self: center;
+    justify-self: end;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background-color: var(--highlight-pink);
+    font-size: clamp(.5rem, 2vw, 1rem);
+    background-image: url('../assets/arrow-right.svg');
+    background-repeat: no-repeat;
+    background-size: 1.2em;
+    background-position: center;
+}
+
+/* Wanneer programma card actief is */
+.programma-card.active {
+    scale: 1.1;
+    opacity: 1;
+}
+
+/* Styling voor de programma cards die niet actief zijn */
+.programma-card:not(.active) {
+    opacity: .5;
+}
+
+@media screen and (min-width: 1300px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* Verberg 'H1 Programmering' */
+main h1 {
+    display: none;
+}
+
 /* Grid layout player */
 section {
-    display: grid; 
+    display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-
     background-color: white;
     padding: .5em 1em;
     border-radius: .5em;
     filter: drop-shadow(0px 0px 8px #bebebe);
     width: 80vw;
     max-width: 500px;
-
     max-height: 15vh;
-
-
-    position: fixed; 
-    margin: 5% auto; 
+    position: fixed;
+    margin: 5% auto;
     left: 0;
     right: 0;
     bottom: 0;
 
+    @media screen and (min-width: 1300px) {
+        position: relative;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .2fr 1fr .5fr .3fr .3fr .2fr;
+        justify-items: center;
+        margin-top: 3rem;
+        width: 400px;
+        position: sticky;
+        max-height: 60vh;
+    }
 }
 
 /* Reset */
-section> h2, img, a, p {
-    margin: 0; 
+section>h2,
+img,
+a,
+p {
+    margin: 0;
     padding: 0;
 }
 
@@ -464,58 +483,57 @@ section> h2, img, a, p {
 section h2 {
     grid-column: 2/3;
     grid-row: 1/2;
-
     align-self: center;
     text-align: start;
-
     text-transform: uppercase;
     font-size: clamp(.8rem, 3vw, 1.6rem);
-
     margin-left: 1rem;
 
+    @media screen and (min-width: 1300px) {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
 }
 
 /* Player titel en artiest huidig nummer */
 section p {
     grid-column: 2/3;
     grid-row: 2/3;
-    
     align-self: start;
     text-align: start;
     font-size: clamp(.5rem, 3vw, 1rem);
-
-
     display: inline;
-
-    /* background-image: url("../assets/music.svg");
-    background-repeat: no-repeat;
-    background-size: 1em; */
-
     margin-left: 1rem;
-
     color: var(--sub-text);
-    
+
+    @media screen and (min-width: 1300px) {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+    }
 }
 
 /* Player album cover */
 section img {
     grid-column: 1/2;
     grid-row: 1/3;
-
     align-self: center;
-
     width: 100%;
     height: auto;
-
     border-radius: .3em;
 
+    @media screen and (min-width: 1300px) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 50%;
+        height: auto;
+
+    }
 }
 
-/* Player play button */ 
+/* Player play button */
 section a {
     grid-column: 3/4;
     grid-row: 1/3;
-
     align-self: center;
     justify-self: center;
     width: 3em;
@@ -527,62 +545,10 @@ section a {
     background-repeat: no-repeat;
     background-size: 1.2em;
     background-position: center;
-}
 
-/* Responsive player */
-@media screen and (min-width: 1300px) {
-    section {
-        position: relative;
-        margin: 0; 
-
-        display: grid; 
-        grid-template-columns: 1fr;
-        grid-template-rows: .2fr 1fr .5fr .3fr .3fr .2fr;
-
-        justify-items: center;
-
-        margin-top: 3rem;
-        width: 400px;
-
-        position: sticky;
-
-        max-height: 60vh;
-
-    }    
-
-    section h2 {
-        grid-column: 1/-1;
-        grid-row: 3/4;
-    }
-
-    section p {
-        grid-column: 1/-1;
-        grid-row: 4/5;
-    }
-
-    section img {
-        grid-column: 1/2;
-        grid-row: 2/3;
-
-        width: 50%; 
-        height: auto;
-    }
-
-    section a {
+    @media screen and (min-width: 1300px) {
         grid-column: 1/2;
         grid-row: 5/6;
-    }
-
-    main {
-        display: flex; 
-        flex-direction: row; 
-        justify-content: space-evenly;
-    }
-
-    .programmering {
-        height: 63vh; 
-        overflow-y: auto;
-        width: 800px;
     }
 }
 
