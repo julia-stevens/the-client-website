@@ -135,13 +135,15 @@ nav .nav-main-menu {
     /* Flex layout nav bar */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--veronica-blue);
     padding: .3rem .5rem .3rem .5rem;
     position: fixed;
     top: 0;
-    width: 100vw;
+    left: 0; 
+    right: 0;
+    max-width: 100vw;
     z-index: 2;
 }
 
@@ -186,7 +188,7 @@ nav .nav-main-menu a:last-of-type {
     position: fixed;
     width: 100vw;
     margin: 59px 0 0 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .primary-menu.clicked {
@@ -222,10 +224,20 @@ ul, li>a {
 }
 
 /* Flex layout secondair menu */
-ul.secondary-menu {
+.secondary-menu {
     /* border-bottom: solid .1rem var(--sub-text-light); */
     padding: 0 .5rem 0 .5rem;
-    max-width: 700px;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+
+    position: fixed; 
+    width: 100vw; 
+    z-index: 1; 
+    top: 0px; 
+    background-color: white; 
+    transition: all .3s ease-in-out;
+
     /* Flex layout */
     display: flex;
     gap: 3rem;
@@ -237,6 +249,12 @@ ul.secondary-menu {
     @media screen and (min-width: 705px) {
         overflow-x: hidden;
     }
+}
+
+/* Scroll transitie */
+.secondary-menu-up {
+    top: -68px;
+    transition: all .3s ease-in-out;
 }
 
 /* Styling items secondair menu */
@@ -258,29 +276,29 @@ ul.secondary-menu li:last-of-type>a {
     padding-right: 2rem;
 }
 
-/* Scroll transitie */
-.secondary-menu {
+/* Flex layout dagen van de week */
+.main-days {
+    /* Flex als parent */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+
     position: fixed; 
     width: 100vw; 
     z-index: 1; 
-    top: 0px; 
+    top: 125px; 
     background-color: white; 
     transition: all .3s ease-in-out;
 }
 
 /* Scroll transitie */
-.secondary-menu-up {
-    top: -68px;
+.main-days-up {
+    top: -125px;
     transition: all .3s ease-in-out;
-}
-
-/* Flex layout dagen van de week */
-ul.main-days {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 5rem;
-    max-width: 700px;
 }
 
 /* Styling dagen van de week */
@@ -309,22 +327,6 @@ ul.main-days li:nth-of-type(2)>a {
     color: white;
 }
 
-/* Scroll transitie */
-.main-days {
-    position: fixed; 
-    width: 100vw; 
-    z-index: 1; 
-    top: 125px; 
-    background-color: white; 
-    transition: all .3s ease-in-out;
-}
-
-/* Scroll transitie */
-.main-days-up {
-    top: -125px;
-    transition: all .3s ease-in-out;
-}
-
 /* Midden centreren secondary & main days memu */
 .nav-ul {
     display: flex; 
@@ -338,7 +340,8 @@ ul.main-days li:nth-of-type(2)>a {
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    margin-top: 3rem;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
 
     @media screen and (min-width: 1300px) {
         height: 63vh;
@@ -384,7 +387,7 @@ ul.main-days li:nth-of-type(2)>a {
     justify-self: center;
     width: 100%;
     text-align: center;
-    padding: .2em 0em .2em 0em;
+    padding: .2em .5em .2em .5em;
     font-weight: bold;
     color: white;
     border-radius: .3em;
