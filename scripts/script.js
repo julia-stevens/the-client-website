@@ -1,52 +1,52 @@
-// Hamburger menu 
-const primaryMenu = document.getElementById("primary-menu");
-const checkBox = document.getElementById("hamburger-menu");
+const programmaCard = document.querySelectorAll(".programma-card");
+let activeCard = null; // Variable to store the currently active card
 
-checkBox.addEventListener("click", function() {
-    primaryMenu.classList.toggle("clicked")
-  });
+// Function to refresh the status of the active card based on the current time
+function refreshStatus() {
+    const currentHour = new Date().getHours(); // Get the current hour
+    const currentHourFormatted = currentHour.toString().padStart(2, '0') + ":00"; // Format current hour
 
-// Programma cards 
-const programmaCard = document.getElementsByClassName("programma-card");
+    let newActiveCard = null; // Variable to store the new active card
 
-const refreshStatus = () => {
-  // Get current date/time
-  let today = new Date();
-  let currentHour = today.getHours();
+    // Loop through each card to determine if it should be active
+    Array.from(programmaCard).forEach(card => {
+        // Split the card's id into an array of hours
+        const cardHours = card.id.split(" ");
 
-  // Format current hour as "HH:00" (e.g., "11:00" for 11 AM, "15:00" for 3 PM)
-  let currentHourFormatted = currentHour.toString().padStart(2, '0') + ":00";
-
-  // Loop through all programma-card elements
-  Array.from(programmaCard).forEach(card => {
-    // Split the card's id into an array of hours (since ids have multiple hours)
-    let cardHours = card.id.split(" ");
-
-    // Check if any of the hours in the card's id matches the current hour
-    if (cardHours.includes(currentHourFormatted)) {
-      // Add 'active' class if it matches
-      card.classList.add("active");
-    } else {
-      // Remove 'active' class if it doesn't match
-      card.classList.remove("active");
-    }
-  });
-
-  // Scroll into view the first element that matches the current hour if it exists
-  const currentHourElement = Array.from(programmaCard).find(card => card.id.includes(currentHourFormatted));
-  
-  if (currentHourElement) {
-    currentHourElement.scrollIntoView({
-      behavior: "smooth", 
-      block: "center"
+        // Check if the current hour matches any of the card's time slots
+        if (cardHours.includes(currentHourFormatted)) {
+            // If this card should be active
+            newActiveCard = card; // Set this card as the new active card
+        }
     });
-  }
-};
 
-// Call the function immediately to run on page load
-refreshStatus();
-// Set the interval to refresh every minute (60,000 milliseconds)
+    // Update the active card only if it has changed
+    if (newActiveCard !== activeCard) {
+        // If there's a previously active card, deactivate it
+        if (activeCard) {
+            activeCard.classList.remove("active");
+            activeCard.querySelector('.time-indicator').classList.remove('active'); // Deactivate animation for this card
+        }
+
+        // Set the new active card and activate it
+        if (newActiveCard) {
+            newActiveCard.classList.add("active");
+            newActiveCard.querySelector('.time-indicator').classList.add('active'); // Activate the animation for this card
+        }
+
+        // Update the reference to the active card
+        activeCard = newActiveCard;
+    }
+}
+
+// Call refreshStatus immediately and then set up to call it every minute
+refreshStatus(); 
 setInterval(refreshStatus, 60000);
+
+
+
+
+
 
 // Bron: https://jsfiddle.net/mariusc23/s6mLJ/31/
 // Hide .secondary-menu and .main-days on scroll down
@@ -95,4 +95,17 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
+var now = new Date();
+var time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // Customize the time format
+
+// Insert time into HTML
+document.getElementById("datetime1").innerHTML = time;
+document.getElementById("datetime2").innerHTML = time;
+document.getElementById("datetime3").innerHTML = time;
+document.getElementById("datetime4").innerHTML = time;
+document.getElementById("datetime5").innerHTML = time;
+document.getElementById("datetime6").innerHTML = time;
+document.getElementById("datetime7").innerHTML = time;
+document.getElementById("datetime8").innerHTML = time;
+document.getElementById("datetime9").innerHTML = time;
 
