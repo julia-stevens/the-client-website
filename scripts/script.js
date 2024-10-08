@@ -1,3 +1,10 @@
+// JS
+const primaryMenu = document.getElementById("primary-menu");
+const checkBox = document.getElementById("hamburger-menu");
+checkBox.addEventListener("click", function() {
+    primaryMenu.classList.toggle("clicked")
+  });
+
 const programmaCard = document.querySelectorAll(".programma-card");
 let activeCard = null; // Variable to store the currently active card
 
@@ -42,11 +49,6 @@ function refreshStatus() {
 // Call refreshStatus immediately and then set up to call it every minute
 refreshStatus(); 
 setInterval(refreshStatus, 60000);
-
-
-
-
-
 
 // Bron: https://jsfiddle.net/mariusc23/s6mLJ/31/
 // Hide .secondary-menu and .main-days on scroll down
