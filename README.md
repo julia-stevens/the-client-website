@@ -1,8 +1,16 @@
 # The Client - Website
 
+**De opdracht**
+
 De afgelopen 3 weken heb ik gewerkt aan de opdracht _Mediahuis_ van Triple. Deze opdracht luidt als volgt: creëer een radioguide (een webapp) die informatie geeft over programma's, DJ's, en een persoonlijke ervaring biedt voor elke luisteraar. 
 
 Ik heb me tijdens deze sprint gericht op het 'namaken' van de huidige programmering van radio Veronica. En ik heb hierbij een aantal functionaliteiten toegevoegd en een aantal onderdelen herontworpen. 
+
+**Over Triple & Mediahuis**
+
+Mediahuis, met wortels in België, is uitgegroeid tot een invloedrijke speler in de Europese mediamarkt. Het bedrijf, actief in de Benelux, Duitsland en Ierland, heeft een divers portfolio van nieuwsmerken, online platforms en radiostations. Sinds 2023 heeft Mediahuis haar bereik verder uitgebreid door de overname van verschillende populaire radiostations, waaronder Radio Veronica, SLAM!, Sublime, Sunlite en 100% NL. 
+
+Triple is verantwoordelijk voor het ontwikkelen en onderhouden van de web apps en mobiele apps voor al deze radiozenders. Dit omvat zowel de front-end ontwikkeling, die zorgt voor de gebruikersinterface en -ervaring, als de back-end ontwikkeling, die de technische infrastructuur en functionaliteiten van de apps ondersteunt. Door deze uitgebreide samenwerking draagt Triple bij aan het succes van de digitale kanalen van Mediahuis en zorgt het ervoor dat luisteraars een optimale ervaring hebben.
 
 <!-- De instructie van deze leertaak staan in de [INSTRUCTIONS.md](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md) -->
 
