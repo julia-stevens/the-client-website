@@ -36,7 +36,7 @@ https://github.com/user-attachments/assets/f8db6d73-eaca-46dc-a821-1684d1ee9c2c
 
 En de player verschuift zich bij een grotere browser naast de programmering
 
-https://github.com/user-attachments/assets/e0c1042c-08b6-4f49-b76f-f46c218e2a26
+https://github.com/user-attachments/assets/6137c2d6-5edd-4ba2-82eb-13968a51af5f
 
 Daarnaast zijn er een aantal hover transitions toegevoegd:  
 
