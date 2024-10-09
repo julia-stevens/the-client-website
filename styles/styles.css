@@ -369,13 +369,13 @@ ul.main-days li:nth-of-type(2)>a {
     margin-bottom: 15rem;
 
     @media screen and (min-width: 1300px) {
-        height: 100vh;
-        /* overflow-y: auto; */
+        height: 70vh;
+        overflow-y: auto;
         width: 800px;
 
         padding: 3rem 0 3rem;
 
-        margin-top: 12rem;
+        /* margin-top: 12rem; */
         padding-bottom: 2rem;
     }
 }
