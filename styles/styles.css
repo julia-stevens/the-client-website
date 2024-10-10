@@ -89,18 +89,18 @@ body {
 }
 
 /* Vormgeving Hamburger Menu */
-input[type=checkbox]+label {
+input[type=checkbox]+label { /* Selecteert het <label> element dat direct na een checkbox <input type="checkbox"> komt */
     span {
-        display: block;
-        width: 1.5rem;
-        height: 2px;
-        background-color: white;
-        margin: .28rem;
-        transition: all 0.3s;
+        display: block; /* Zorgt ervoor dat het <span> element als een blok wordt weergegeven (blok-elementen nemen de volledige breedte in) */
+        width: 1.5rem; /* Stelt de breedte van het <span> element in op 1.5 rem (waarbij 1 rem gelijk is aan de lettergrootte van het element) */
+        height: 2px; /* Stelt de hoogte van het <span> element in op 2 pixels */
+        background-color: white; /* Geeft het <span> element een witte achtergrondkleur */
+        margin: .28rem; /* Voegt een marge van 0.28 rem toe rondom het <span> element */
+        transition: all 0.3s;  /* Zorgt voor een overgangseffect van 0.3 seconden op alle veranderbare eigenschappen (zoals bij hover of andere acties) */
     }
 
-    @media screen and (min-width:730px) {
-        display: none;
+    @media screen and (min-width:730px) { /* Media query: past alleen CSS aan als de schermbreedte groter is dan 730px */
+        display: none; /* Verbergt het label wanneer het scherm breder is dan 730px */
     }
 }
 
@@ -290,7 +290,7 @@ ul.secondary-menu li>a:hover {
 }
 
 /* Padding laaste link item secondair menu */
-ul.secondary-menu li:last-of-type>a {
+ul.secondary-menu li:last-of-type>a { /* Selecteert alle <a> elementen in de laatste <li> van een <ul>, genaamd 'secondary-menu' */
     padding-right: 2rem;
 }
 
@@ -348,8 +348,8 @@ ul.main-days li:nth-of-type(2) {
 }
 
 /* Tekst in list item */
-ul.main-days li:nth-of-type(2)>a {
-    color: white;
+ul.main-days li:nth-of-type(2)>a { /* Selecteert de <a> (anchor) binnen het tweede <li> element van een <ul> met de class "main-days" */
+    color: white; /* Stelt de tekst kleur van alle <a> elementen binnen de tweede <li> in op wit */
 }
 
 /* Midden centreren secondary & main days memu */
@@ -499,8 +499,8 @@ ul.main-days li:nth-of-type(2)>a {
 }
 
 /* Styling voor de programma cards die niet actief zijn */
-.programma-card:not(.active) {
-    opacity: .5;
+.programma-card:not(.active) { /* Selecteert elk element met de class "programma-card" dat NIET de class "active" heeft */
+    opacity: .5; /* Verlaagt de zichtbaarheid (opacity) van het geselecteerde element naar 50%, waardoor het semi-transparant wordt */
 }
 
 @media screen and (min-width: 1300px) {
