@@ -12,7 +12,7 @@ Mediahuis, met wortels in België, is uitgegroeid tot een invloedrijke speler in
 
 Triple is verantwoordelijk voor het ontwikkelen en onderhouden van de web apps en mobiele apps voor al deze radiozenders. Dit omvat zowel de front-end ontwikkeling, die zorgt voor de gebruikersinterface en -ervaring, als de back-end ontwikkeling, die de technische infrastructuur en functionaliteiten van de apps ondersteunt. Door deze uitgebreide samenwerking draagt Triple bij aan het succes van de digitale kanalen van Mediahuis en zorgt het ervoor dat luisteraars een optimale ervaring hebben.
 
-<!-- De instructie van deze leertaak staan in de [INSTRUCTIONS.md](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md) -->
+De instructie van deze leertaak staan in de [INSTRUCTIONS.md](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md)
 
 ## Inhoudsopgave Readme
 
