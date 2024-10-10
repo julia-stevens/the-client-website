@@ -100,7 +100,8 @@ Scrollgedrag voor sub-menu's: Wanneer er omlaag wordt gescrold voorbij de sub-me
 ## Bronnen
 
 https://jsfiddle.net/mariusc23/s6mLJ/31/
-...
+https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+https://codepen.io/js1909/pen/BaXjopx
 
 ## Licentie
 
