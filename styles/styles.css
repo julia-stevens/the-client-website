@@ -339,7 +339,7 @@ ul.main-days li {
 }
 
 .main-days strong {
-    display: block;
+    display: block; /* strong element met de data (cijfers) neemt de hele breedte in, zodat deze onder de dagen wordt geplaatst */ 
 }
 
 ul.main-days li:nth-of-type(2) {
